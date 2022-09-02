@@ -15,13 +15,15 @@ const citiesSlice = createSlice({
             };
             state.push(newCity)
         },
-        // toggleComplete: (state, action) => {
-        //     const index = state.findIndex((city) => city.id === action.payload.id)
-        //     state[index].completed = action.payload.completed;
-        // }
+        deleteCity: (state, action) => {
+            restate.filter((city) => {
+                return city.id !== action.payload.id
+            })
+        }
+
     }
 });
 
-export const { addCity } = citiesSlice.actions;
+export const { addCity, deleteCity } = citiesSlice.actions;
 export default citiesSlice.reducer;
 
