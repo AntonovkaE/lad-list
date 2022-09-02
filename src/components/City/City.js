@@ -1,19 +1,19 @@
 import React from 'react';
-import { deleteCity} from "../redux/citiesSlice";
+import { deleteCity} from "../../redux/citiesSlice";
 import { useDispatch} from "react-redux";
 
-const TodoItem = ({ id, title }) => {
+const TodoItem = ({ id, city }) => {
     const dispatch = useDispatch()
     const handleDeleteClick = () => {
         dispatch(deleteCity({ id: id }))
     }
     return (
-        <li className={`list-group-item'}`}>
+        <li className='list-group-item'>
             <div className='d-flex justify-content-between'>
 				<span className='d-flex align-items-center'>
-                    {title}
+                    {city}
 				</span>
-                <button onClick={handleDeleteClick} className='btn btn-danger'>Delete</button>
+                <button onClick={handleDeleteClick} className='btn btn-outline-danger'>Delete</button>
             </div>
         </li>
     );

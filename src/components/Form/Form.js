@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import {useDispatch} from "react-redux";
-import { addCity } from "../redux/citiesSlice";
+import { useDispatch } from "react-redux";
+import { addCity } from "../../redux/citiesSlice";
 
 
 const Form = () => {
@@ -10,7 +10,7 @@ const Form = () => {
         event.preventDefault();
         console.log('user entered: ' + value);
         dispatch(addCity({
-            title: value,
+            city: value,
         }))
     };
 
