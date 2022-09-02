@@ -3,7 +3,7 @@ import Home from "../pages/home";
 import About from "../pages/About";
 import { Navbar } from "./Navbar";
 import { Form } from "./Form";
-import { List } from "./List";
+import { Cities } from "./Cities";
 import { Alert } from "./Alert";
 
 function App() {

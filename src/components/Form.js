@@ -1,28 +1,22 @@
-import React from "react";
-
-export const Form = () => {
-    return (
-        <form>
-            <div className="form-group">
-                <input type="text" className="form-control" placeholder="Ввод имени"/>
-
-            </div>
-
-    </form>)
-}
 import React, { useState } from 'react';
+import {useDispatch} from "react-redux";
+import { addCity } from "../redux/citiesSlice";
 
-const AddTodoForm = () => {
+
+const Form = () => {
     const [value, setValue] = useState('');
-
+    const dispatch = useDispatch()
     const onSubmit = (event) => {
         event.preventDefault();
         console.log('user entered: ' + value);
+        dispatch(addCity({
+            title: value,
+        }))
     };
 
     return (
-        <form onSubmit={onSubmit} className='form-inline mt-3 mb-3'>
-            <label className='sr-only'>Name</label>
+        <form onSubmit={onSubmit} className='form-inline mt-3 mb-3 form-control'>
+            <label className='sr-only'>City</label>
             <input
                 type='text'
                 className='form-control mb-2 mr-sm-2'
@@ -38,4 +32,4 @@ const AddTodoForm = () => {
     );
 };
 
-export default AddTodoForm;
+export default Form;

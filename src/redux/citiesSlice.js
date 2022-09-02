@@ -14,7 +14,11 @@ const citiesSlice = createSlice({
                 title: action.payload.title
             };
             state.push(newCity)
-        }
+        },
+        // toggleComplete: (state, action) => {
+        //     const index = state.findIndex((city) => city.id === action.payload.id)
+        //     state[index].completed = action.payload.completed;
+        // }
     }
 });
 

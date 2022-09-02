@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Form } from "../components/Form";
-import { List } from "../components/List";
+import { Cities } from "../components/Cities";
 export const Home = () => {
     const  list = new Array(3)
         .fill('')
@@ -10,7 +10,7 @@ export const Home = () => {
             <h1>HOME</h1>
             <Form/>
             <hr/>
-            <List list={list}></List>
+            <Cities list={list}></Cities>
         </Fragment>
     )
 }
