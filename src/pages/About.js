@@ -8,6 +8,7 @@ export const About = () => {
             <Cities/>
             <Form/>
         </Fragment>
+
     )
 }
 
