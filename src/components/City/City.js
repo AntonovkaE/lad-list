@@ -1,9 +1,18 @@
 import React from 'react';
 import { deleteCity} from "../../redux/citiesSlice";
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect} from "react";
+import { fetchCityCoords } from "../../redux/cityData/cityApi";
 
 const TodoItem = ({ id, city }) => {
+    const cityCoords = useSelector(state => state.coords)
+    console.log(cityCoords)
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(fetchCityCoords(city))
+    }, [])
+
     const handleDeleteClick = () => {
         dispatch(deleteCity({ id: id }))
     }

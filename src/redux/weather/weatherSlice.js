@@ -4,12 +4,7 @@ import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 const initialState = {
     loading: true,
     weather: {
-        // type: '',
-        // temMax: null,
-        // temMin: null,
-        // wind: null,
     },
-
 }
 
 export const fetchWeather = createAsyncThunk('weather/fetchWeather', () => {
@@ -27,18 +22,11 @@ const weatherSlice = createSlice({
         })
         builder.addCase(fetchWeather.fulfilled, (state, action) => {
             state.loading = false;
-            // state.weather.type = action.payload.weather;
-            // state.weather.temMax = action.payload.temp2m.max;
-            // state.weather.temMin = action.payload.temp2m.min;
-            // state.weather.wind = action.payload.wind10m_max;
-            // console.log(state.weather.temMax)
-            console.log(action)
             state.weather = action.payload
-            console.log(state.weather)
             // state.error = ''
         })
         builder.addCase(fetchWeather.rejected, (state, action) => {
-            // state.loading = false
+            state.loading = false
             state.weather = []
             // state.error = action.payload
         })

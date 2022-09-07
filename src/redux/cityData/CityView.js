@@ -1,27 +1,27 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchWeather } from "./weatherSlice";
+import { fetchCityCoords } from "./cityApi";
 
-export const WeatherView = () => {
-    const weatherInfo = useSelector(state => state.weather)
+export const CityView = () => {
+    const cityCoords = useSelector(state => state.coords)
     const dispatch = useDispatch();
-    // console.log(weatherInfo)
+    console.log(cityCoords)
     useEffect(() => {
-        dispatch(fetchWeather())
+        dispatch(fetchCityCoords())
     }, [])
-    const {temp2m, date, weather} = weatherInfo.weather;
     return (
         <div>
             <h2>Weather in cities</h2>
             {/*{ weather.loading && <div>Loading...</div> }*/}
             {/*{ !weather.loading && weather.error ? <div>Error: { weather.error }</div> : null }*/}
             {/*{ !weather.loading && weather ? (*/}
-                <div>
-                    <h1> тут будет погода {weather} </h1>
-                </div>
+            <div>
+                <h1> тут будет cityData </h1>
+            </div>
             {/*) */}
             {/*: null*/}
             {/*}*/}
         </div>
     )
 }
+
