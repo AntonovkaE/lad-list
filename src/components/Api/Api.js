@@ -6,24 +6,18 @@ const WEATHER_KEY = '2bed74261c134e5daa728d60d7473405'
 
 export const fetchCityCoords = createAsyncThunk('cityData/fetchCityData', (city) => {
     return axios
-        .get(`https://api.geocodify.com/v2/geocode?api_key=aaf64b131532d9f33080988c6bd48df655a77998&q=${ city }`)
+        .get(`https://api.geocodify.com/v2/geocode?api_key=aaf64b131532d9f33080988c6bd48df655a77998&q=${ city }&lang=ru`)
         .then((response) => {
-            return response.data.response.features[0].geometry.coordinates
+            console.log(response.data)
+            return response.data.response.features[0]
         })
 });
 
-export const fetchWeather = createAsyncThunk('weather/fetchWeather', (coords = [1, 1]) => {
+export const fetchForecast = createAsyncThunk('forecast/fetchForecast', ([lon= 0, lat= 0]) => {
     return axios
-        .get(`${WEATHER_API}/current?lat=${ coords[1] }&lon=${ [coords[0]] }&key=${WEATHER_KEY}&include=minutely`)
+        .get(`${WEATHER_API}/forecast/daily?lat=${ lat}&lon=${ [lon] }&key=${WEATHER_KEY}&include=minutely&lang=ru`)
         .then(response => {
-            return response.data.data[0]
-        })
-})
-
-export const fetchForecast = createAsyncThunk('forecast/fetchForecast', (coords = [1, 1]) => {
-    return axios
-        .get(`${WEATHER_API}/forecast/daily?lat=${ coords[1] }&lon=${ [coords[0]] }&key=${WEATHER_KEY}&include=minutely&lang=ru`)
-        .then(response => {
+            console.log(lon,lat)
             return response.data.data
         })
 })

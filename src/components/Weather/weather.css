@@ -1,0 +1,9 @@
+.day {
+    border: #000000;
+}
+
+.day__text {
+    margin: 5%;
+    padding: 0;
+    text-align: center;
+}

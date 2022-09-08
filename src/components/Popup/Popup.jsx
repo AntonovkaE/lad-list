@@ -3,7 +3,14 @@ import { useEffect } from "react";
 import './popup.css'
 
 
-const Popup = ({ isOpen, name, onClose, children }) => {
+const Popup = ({ isOpen, name, onClose, background, children }) => {
+    console.log(background)
+    const myStyle = {
+        backgroundImage: "url(background)",
+        height: '100vh',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+    }
     useEffect(() => {
         if (!isOpen) return;
         const closeByEscape = (e) => {
@@ -22,25 +29,14 @@ const Popup = ({ isOpen, name, onClose, children }) => {
     }
     return (
         <div className={ `modal-xl popup ${isOpen ? "popup_open" : ""} popup_${name}`} onClick={handleOverlay}>
-            <div className={`popup__container popup__container_${name}`}>
-                <div className="modal-header">
+            <div className={`popup__container popup__container_${name}`} style={{ backgroundImage: `url(${background}`}}>
+                <div className="popup__close">
                     <button onClick={onClose}  type="button" className="btn-close" aria-label="Close"></button>
                 </div>
                 {children}
-                {/*<div className="modal-footer">*/}
-                {/*    /!*<button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>*!/*/}
-                {/*</div>*/}
             </div>
         </div>
-        // <div
-        //     className={`popup ${isOpen ? "popup_open" : ""} popup_${name}`}
-        //     onClick={handleOverlay}
-        // >
-        //     <div className={`popup__container popup__container_${name}`}>
-        //
-        //         {children}
-        //     </div>
-        // </div>
+
     );
 };
 

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchCityCoords, fetchForecast } from "../components/Api/Api";
-import { fetchWeather} from "../components/Api/Api";
+
 
 const initialState = {
     loading: true,
@@ -9,6 +9,8 @@ const initialState = {
     },
     forecast: {},
     city: '',
+    country: ''
+
 }
 
 const cityDataSlice = createSlice({
@@ -25,9 +27,10 @@ const cityDataSlice = createSlice({
         })
         builder.addCase(fetchCityCoords.fulfilled, (state, action) => {
             state.loading = false;
-            state.coords = action.payload
+            state.coords = action.payload.geometry.coordinates
+            state.city = action.payload.properties.name
+            state.country = action.payload.properties.country
 
-            console.log(state.coords)
             // state.error = ''
         })
         builder.addCase(fetchCityCoords.rejected, (state, action) => {
@@ -35,27 +38,27 @@ const cityDataSlice = createSlice({
             state.coords = []
             // state.error = action.payload
         })
-        builder.addCase(fetchWeather.pending, state => {
-            state.loading = true
-        })
-        builder.addCase(fetchWeather.fulfilled, (state, action) => {
-            state.loading = false;
-            console.log(action.payload)
-            state.weather = action.payload
-            // state.error = ''
-        })
-        builder.addCase(fetchWeather.rejected, (state, action) => {
-            state.loading = false
-            state.weather = {}
-            // state.error = action.payload
-        })
+        // builder.addCase(fetchWeather.pending, state => {
+        //     state.loading = true
+        // })
+        // builder.addCase(fetchWeather.fulfilled, (state, action) => {
+        //     state.loading = false;
+        //     state.weather = action.payload
+        //     // state.error = ''
+        // })
+        // builder.addCase(fetchWeather.rejected, (state, action) => {
+        //     state.loading = false
+        //     state.weather = {}
+        //     // state.error = action.payload
+        // })
         builder.addCase(fetchForecast.pending, state => {
             state.loading = true
         })
         builder.addCase(fetchForecast.fulfilled, (state, action) => {
             state.loading = false;
-            console.log(action.payload)
             state.forecast = action.payload
+            state.forecast.length = 8
+            console.log(state.forecast)
             // state.error = ''
         })
         builder.addCase(fetchForecast.rejected, (state, action) => {
