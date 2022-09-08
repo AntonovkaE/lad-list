@@ -1,14 +1,12 @@
 import React, { Fragment } from "react";
-import { WeatherView } from "../redux/weather/WeatherView";
-import { CityView } from "../redux/cityData/CityView"
+import Popup from "../components/Popup/Popup";
+
 
 export const Home = () => {
     return (
         <Fragment>
             <h1>Погода</h1>
             <hr/>
-            <WeatherView/>
-            {/*<CityView/>*/}
         </Fragment>
     )
 }

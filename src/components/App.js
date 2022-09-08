@@ -2,25 +2,30 @@ import { Route, Routes } from 'react-router-dom';
 import Home from "../pages/Home";
 import About from "../pages/About";
 import { Navbar } from "./Navbar/Navbar";
-import  Form  from "./Form/Form";
-import { Cities } from "./List/Cities";
-import { WeatherView } from "../redux/weather/WeatherView";
-
+import Popup from "./Popup/Popup";
+import WeatherPopup from "./WeatherPopup/WeatherPopup";
+import { useState } from "react";
 
 function App() {
+    const [isWeatherPopupOpen, setIsWeatherPopupOpen] = useState(false)
+    const closeAllPopups = () => {
+        setIsWeatherPopupOpen(false)
+    }
+    const handleShowWeatherClick = () => {
+        setIsWeatherPopupOpen(!isWeatherPopupOpen)
+    }
+
     return (
         <div className="page">
-
             <Navbar />
             <div className="container pt-5">
                 <Routes>
-
-                    <Route path="/about" element={ <About/> }>
-
+                    <Route path="/about" element={ <About onShowWeather={handleShowWeatherClick} /> }>
                     </Route>
                     <Route path="/" element={ <Home/> }>
                     </Route>
                 </Routes>
+                <WeatherPopup isOpen={ isWeatherPopupOpen } onClose={ closeAllPopups }/>
             </div>
         </div>
 

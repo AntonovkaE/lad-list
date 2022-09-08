@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchCityCoords, fetchForecast } from "../components/Api/cityApi";
-import { fetchWeather} from "../components/Api/cityApi";
+import { fetchCityCoords, fetchForecast } from "../components/Api/Api";
+import { fetchWeather} from "../components/Api/Api";
 
 const initialState = {
     loading: true,
-    coords: [],
+    coords: [0, 0],
     weather: {
     },
     forecast: {},
@@ -46,7 +46,7 @@ const cityDataSlice = createSlice({
         })
         builder.addCase(fetchWeather.rejected, (state, action) => {
             state.loading = false
-            state.weather = []
+            state.weather = {}
             // state.error = action.payload
         })
         builder.addCase(fetchForecast.pending, state => {
@@ -55,12 +55,12 @@ const cityDataSlice = createSlice({
         builder.addCase(fetchForecast.fulfilled, (state, action) => {
             state.loading = false;
             console.log(action.payload)
-            state.weather = action.payload
+            state.forecast = action.payload
             // state.error = ''
         })
         builder.addCase(fetchForecast.rejected, (state, action) => {
             state.loading = false
-            state.weather = []
+            state.forecast = {}
             // state.error = action.payload
         })
     }
