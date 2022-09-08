@@ -5,7 +5,6 @@ import { fetchWeather } from "./weatherSlice";
 export const WeatherView = () => {
     const weatherInfo = useSelector(state => state.weather)
     const dispatch = useDispatch();
-    // console.log(weatherInfo)
     useEffect(() => {
         dispatch(fetchWeather())
     }, [])

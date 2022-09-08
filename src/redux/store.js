@@ -8,9 +8,7 @@ import thunk from 'redux-thunk'
 
 export default configureStore({
     reducer: {
-        weather: weatherReducer,
-        cities: cityReducer,
-        coords: geocodingReducer,
+        city: geocodingReducer,
     },
 
 })

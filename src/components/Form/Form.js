@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
-import { addCity } from "../../redux/citiesSlice";
-
+// import { addCity } from "../../redux/citiesSlice";
+import { showWeather } from '../../redux/cityData/geocodingSlice'
 
 const Form = () => {
     const [value, setValue] = useState('');
     const dispatch = useDispatch()
+
     const onSubmit = (event) => {
         event.preventDefault();
-        console.log('user entered: ' + value);
-        dispatch(addCity({
+        dispatch(showWeather({
             city: value,
         }))
     };
