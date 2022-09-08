@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchCityCoords, fetchForecast } from "./cityApi";
-import { fetchWeather} from "./cityApi";
+import { fetchCityCoords, fetchForecast } from "../components/Api/cityApi";
+import { fetchWeather} from "../components/Api/cityApi";
 
 const initialState = {
     loading: true,
@@ -9,10 +9,9 @@ const initialState = {
     },
     forecast: {},
     city: '',
-
 }
 
-const geocodingSlice = createSlice({
+const cityDataSlice = createSlice({
     name: 'city',
     initialState,
     reducers: {
@@ -67,7 +66,7 @@ const geocodingSlice = createSlice({
     }
 })
 
-export const { showWeather } = geocodingSlice.actions;
+export const { showWeather } = cityDataSlice.actions;
 
-export default geocodingSlice.reducer
+export default cityDataSlice.reducer
 

@@ -1,14 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit'
-import cityReducer from './citiesSlice'
-import weatherReducer from './weather/weatherSlice'
-import geocodingReducer from "./cityData/geocodingSlice";
-import { applyMiddleware } from "@reduxjs/toolkit";
-import thunk from 'redux-thunk'
-
+import { configureStore } from '@reduxjs/toolkit';
+import cityDataReducer from "./cityDataSlice";
 
 export default configureStore({
     reducer: {
-        city: geocodingReducer,
+        city: cityDataReducer,
     },
 
 })

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 // import { addCity } from "../../redux/citiesSlice";
-import { showWeather } from '../../redux/cityData/geocodingSlice'
+import { showWeather } from '../../redux/cityDataSlice'
 
 const Form = () => {
     const [value, setValue] = useState('');

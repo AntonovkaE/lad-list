@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect} from "react";
-import { fetchCityCoords, fetchWeather } from "../../redux/cityData/cityApi";
+import { fetchCityCoords, fetchWeather } from "../Api/cityApi";
 
 
 const City = ({ city }) => {
