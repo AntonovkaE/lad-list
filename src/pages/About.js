@@ -4,7 +4,7 @@ import Form from "../components/Form/Form";
 export const About = ({onShowWeather}) => {
     return (
         <Fragment>
-            <h1>hi</h1>
+            <h2>Узнать погоду в любом городе</h2>
             <Form handleSubmit={onShowWeather}/>
         </Fragment>
 

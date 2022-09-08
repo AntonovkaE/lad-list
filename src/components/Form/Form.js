@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 // import { addCity } from "../../redux/citiesSlice";
 import { showWeather } from '../../redux/cityDataSlice'
 import Input from "../Input/Input";
+import './style.css'
 
 const Form = ({handleSubmit}) => {
     const [city, setCity] = useState('');
@@ -21,8 +22,8 @@ const Form = ({handleSubmit}) => {
     }
 
     return (
-        <form onSubmit={onSubmit} className='form-inline mt-3 mb-3 form-control'>
-            <label className='sr-only'>City</label>
+        <form onSubmit={onSubmit} className='form-inline mt-3 mb-3 form-control d-flex justify-content-between align-content-md-center '>
+            <label className='sr-only'>Прогноз на 8 дней</label>
             <Input
                 name="city"
                 minLength="2"
@@ -41,8 +42,8 @@ const Form = ({handleSubmit}) => {
             {/*    onChange={(event) => setCity(event.target.value)}*/}
             {/*></input>*/}
 
-            <button type='submit' className='btn btn-primary mb-2'>
-                Submit
+            <button type='submit' className='btn btn-light'>
+                Узнать
             </button>
         </form>
     );

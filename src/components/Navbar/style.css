@@ -1,0 +1,13 @@
+.navbar-nav {
+    width: 50%;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.nav-item {
+    margin-left: 10%;
+}
+
+.navbar {
+    justify-content: space-around;
+}

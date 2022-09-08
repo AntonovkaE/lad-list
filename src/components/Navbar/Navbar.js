@@ -1,14 +1,15 @@
 import {NavLink} from "react-router-dom";
+import './style.css'
 
 export const Navbar = () => (
-    <nav className="navbar navbar-dark navbar-expand-lg bg-primary p-3">
-           <div className="navbar-brand">LAD</div>
+    <nav className="navbar navbar-expand-lg bg-light">
+           <div className="navbar-brand">Weather</div>
            <ul className="navbar-nav">
                <li className="nav-item">
                    <NavLink className="nav-link" to="/">Home</NavLink>
                </li>
                <li className="nav-item">
-                   <NavLink className="nav-link" to="/about">About</NavLink>
+                   <NavLink className="nav-link" to="/about">Прогноз погоды</NavLink>
                </li>
            </ul>
     </nav>)
