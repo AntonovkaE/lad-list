@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCitiesWeather } from '../Api/Api';
 import City from '../City/City';
+import './galery.css';
 
 
 function Gallery({ commonArray }) {
@@ -24,7 +25,8 @@ function Gallery({ commonArray }) {
   return (<div><h2>Разные города</h2>
       <ul className="list-group city-list">
         { citiesWithWeather.length ? citiesWithWeather.map((item, i) => (
-          <City key={ i } city={ item }/>)) : '' }</ul>
+          <li className={ `city-list__item city-list__item_${i}` } key={ i }><City city={ item }/></li>)) : '' }
+      </ul>
     </div>
 
   );

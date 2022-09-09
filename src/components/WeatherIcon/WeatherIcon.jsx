@@ -7,8 +7,9 @@ import snowIcon from '../../assets/img/snow.png'
 import stormIcon from '../../assets/img/storm1.png'
 import sunIcon from  '../../assets/img/sun.png'
 import fogIcon from  '../../assets/img/free-icon-mist-2910189.png'
+import './weatherIcon.css'
 
-function WeatherIcon ({code}) {
+function WeatherIcon ({code, id}) {
     let icon = ((code < 234) ? stormIcon :
         (code <= 302 ) ? snowIcon :
             (code <= 511) ? rainIcon :
@@ -21,7 +22,7 @@ function WeatherIcon ({code}) {
                                         slightRainIcon)
 
     return (
-        <img src={icon} alt={icon} className="day__icon w-75"/>
+        <img src={icon} alt={icon} className={ `day__icon day__icon_${id}` }/>
     )
 }
 

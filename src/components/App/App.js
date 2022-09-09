@@ -16,7 +16,7 @@ function App() {
     }
 
     return (
-        <div className="page">
+        <div className="page container">
             <Navbar />
             <div className="container pt-5">
                 <Routes>

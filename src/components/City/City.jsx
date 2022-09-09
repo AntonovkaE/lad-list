@@ -1,20 +1,20 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCityCoords, fetchForecast } from "../Api/Api";
-import Weather from "../Weather/Weather";
-import '../WeatherPopup/style.css'
+import React from 'react';
+import Weather from '../Weather/Weather';
+import '../WeatherPopup/style.css';
 import { showBackground } from '../../utils/constance';
+import './city.css'
 
 const City = ({ city }) => {
-console.log(city)
-  const background = showBackground(city.weather.code)
+  const background = showBackground(city.weather.code);
   return (
-    <div style={{ backgroundImage: `url(${background}`}}>
-      <h3>{ `${ city.city_name }, ${ city.country_code }` }</h3>
-      <Weather item={city} showDate={false}/>
-  </div>
+    <div className='city-list__background' style={ { backgroundImage: `url(${ background }` } }>
+      <div className='city-list__body'>
+        <h4 className='city-list__title'>{ `${ city.city_name }, ${ city.country_code }` }</h4>
+        <Weather item={ city } showDate={ false } id='gallery'/>
+      </div>
+    </div>
 
-  )
+  );
 };
 
 export default City;

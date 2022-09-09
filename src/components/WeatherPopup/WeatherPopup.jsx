@@ -28,7 +28,7 @@ function WeatherPopup({ isOpen, onClose }) {
         <ul className="list-group weather-list">
           { forecast.length ? forecast.map((item, i) => (
             <li key={ item.datetime } className="p-3 weather-list__item day">
-            <Weather item={ item } showDate={true}/>
+            <Weather item={ item } showDate={true} id=''/>
             </li>)) : ''
           }
         </ul>
