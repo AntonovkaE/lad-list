@@ -23,27 +23,16 @@ const Form = ({handleSubmit}) => {
 
     return (
         <form onSubmit={onSubmit} className='form-inline mt-3 mb-3 form-control d-flex justify-content-between align-content-md-center '>
-            <label className='sr-only'>Прогноз на 8 дней</label>
             <Input
                 name="city"
                 minLength="2"
                 maxLength="20"
-                placeholder='Ваш город'
+                placeholder='Your city'
                 value={city}
                 onChange={handleCityChange}
             />
-            {/*<input*/}
-            {/*    minLength="2"*/}
-            {/*    maxLength="20"*/}
-            {/*    type='text'*/}
-            {/*    className='form-control mb-2 mr-sm-2'*/}
-            {/*    placeholder='Add todo...'*/}
-            {/*    value={city}*/}
-            {/*    onChange={(event) => setCity(event.target.value)}*/}
-            {/*></input>*/}
-
-            <button type='submit' className='btn btn-light'>
-                Узнать
+            <button type='submit' className='btn btn-lg btn-outline-success'>
+               Find
             </button>
         </form>
     );

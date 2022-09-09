@@ -6,7 +6,7 @@ import { commonArray } from '../utils/constance';
 export const About = ({ onShowWeather }) => {
   return (
     <main>
-      <h2>Узнать погоду в любом городе</h2>
+      <h2 className='page__title'>Weather in your city</h2>
       <Form handleSubmit={ onShowWeather }/>
       <Gallery commonArray={ commonArray }/>
     </main>

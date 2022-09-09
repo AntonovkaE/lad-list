@@ -22,7 +22,8 @@ function Gallery({ commonArray }) {
       cities.push(commonArray[index]);
     }
   }
-  return (<div><h2>Разные города</h2>
+
+  return (<div className='section'><h2 className='section__title'>World weather</h2>
       <ul className="list-group city-list">
         { citiesWithWeather.length ? citiesWithWeather.map((item, i) => (
           <li className={ `city-list__item city-list__item_${i}` } key={ i }><City city={ item }/></li>)) : '' }
@@ -31,6 +32,5 @@ function Gallery({ commonArray }) {
 
   );
 }
-
 
 export default Gallery;
