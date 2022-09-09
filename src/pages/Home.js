@@ -1,13 +1,11 @@
-import React, { Fragment } from "react";
-import Popup from "../components/Popup/Popup";
-
+import { Fragment } from 'react';
 
 export const Home = () => {
-    return (
-        <Fragment>
-            <h1>Погода</h1>
-            <hr/>
-        </Fragment>
-    )
-}
-export default Home
+  return (
+    <Fragment>
+      <h1>Погода</h1>
+      <hr/>
+    </Fragment>
+  );
+};
+export default Home;

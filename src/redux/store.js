@@ -1,12 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import cityDataReducer from "./cityDataSlice";
+import cityDataReducer from './cityDataSlice';
 
 export default configureStore({
-    reducer: {
-        city: cityDataReducer,
-    },
-
-})
+  reducer: {
+    city: cityDataReducer,
+  },
+});
 
 // middleware: getDefaultMiddleware =>
 //     getDefaultMiddleware({
