@@ -1,24 +1,34 @@
-import React from "react";
-import City from "../City/City";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCitiesWeather } from '../Api/Api';
+import City from '../City/City';
 
-import Weather from "../Weather/Weather";
 
-function Gallery ({ commonArray }) {
-    const cities = []
-    let  arrayLength = 8;
-    while (cities.length <= arrayLength) {
-        let index = Math.floor(Math.random() * arrayLength);
+function Gallery({ commonArray }) {
+  const data = useSelector((state) => state.city);
+  const dispatch = useDispatch();
+  const { citiesWithWeather } = data;
 
-        if (cities.indexOf(commonArray[index]) == -1) {
-            cities.push(commonArray[index]);
-        }
+  useEffect(() => {
+    const citiesStr = cities.join(',');
+    dispatch(fetchCitiesWeather(citiesStr));
+  }, []);
+
+  const cities = [];
+  while (cities.length <= 8) {
+    let index = Math.floor(Math.random() * commonArray.length);
+    if (cities.indexOf(commonArray[index]) == -1) {
+      cities.push(commonArray[index]);
     }
-    return (
-      <ul className="list-group weather-list">
-        {cities.length ? cities.map((item, i) => (
-          <City key={item.datetime} item={item} days={1}/> )) : ''}
-      </ul>
-    )
+  }
+  return (<div><h2>Разные города</h2>
+      <ul className="list-group city-list">
+        { citiesWithWeather.length ? citiesWithWeather.map((item, i) => (
+          <City key={ i } city={ item }/>)) : '' }</ul>
+    </div>
+
+  );
 }
 
-export default Gallery
+
+export default Gallery;

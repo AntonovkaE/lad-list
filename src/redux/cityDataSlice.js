@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCityCoords, fetchForecast } from '../components/Api/Api';
+import { fetchCitiesWeather, fetchCityCoords, fetchForecast } from '../components/Api/Api';
 
 const initialState = {
   loading: true,
@@ -9,6 +9,7 @@ const initialState = {
   city: '',
   country: '',
   error: '',
+  citiesWithWeather: []
 };
 
 const cityDataSlice = createSlice({
@@ -29,6 +30,7 @@ const cityDataSlice = createSlice({
       state.city = action.payload.properties.name;
       state.country = action.payload.properties.country;
       state.error = '';
+
     });
     builder.addCase(fetchCityCoords.rejected, (state, action) => {
       state.loading = false;
@@ -54,11 +56,25 @@ const cityDataSlice = createSlice({
     builder.addCase(fetchForecast.fulfilled, (state, action) => {
       state.loading = false;
       state.forecast = action.payload;
+      state.forecast.length = 8;
       state.error = '';
     });
     builder.addCase(fetchForecast.rejected, (state, action) => {
       state.loading = false;
       state.forecast = {};
+      state.error = action.payload;
+    });
+    builder.addCase(fetchCitiesWeather.pending, (state) => {
+      state.loading = true;
+    });
+    builder.addCase(fetchCitiesWeather.fulfilled, (state, action) => {
+      state.loading = false;
+      state.citiesWithWeather = action.payload
+      state.error = '';
+    });
+    builder.addCase(fetchCitiesWeather.rejected, (state, action) => {
+      state.loading = false;
+      state.citiesWithWeather = []
       state.error = action.payload;
     });
   },

@@ -1,9 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from "../pages/Home";
-import About from "../pages/About";
-import { Navbar } from "./Navbar/Navbar";
-import WeatherPopup from "./WeatherPopup/WeatherPopup";
+import Home from "../../pages/Home";
+import About from "../../pages/About";
+import { Navbar } from "../Navbar/Navbar";
+import WeatherPopup from "../WeatherPopup/WeatherPopup";
 import { useState } from "react";
+import './App.css'
 
 function App() {
     const [isWeatherPopupOpen, setIsWeatherPopupOpen] = useState(false)
@@ -27,12 +28,7 @@ function App() {
                 <WeatherPopup isOpen={ isWeatherPopupOpen } onClose={ closeAllPopups }/>
             </div>
         </div>
-
-
-
-
     )
-
 }
 
 export default App;

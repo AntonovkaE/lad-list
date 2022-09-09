@@ -4,7 +4,6 @@ import './popup.css'
 
 
 const Popup = ({ isOpen, name, onClose, background, children }) => {
-    console.log(background)
     const myStyle = {
         backgroundImage: "url(background)",
         height: '100vh',
