@@ -22,3 +22,12 @@ export const fetchForecast = createAsyncThunk('forecast/fetchForecast', ([lon= 0
         })
 })
 
+export const fetchWeatherMap = createAsyncThunk('weatherMap/fetchWeatherMap', ([lon= 0, lat= 0]) => {
+    return axios
+        .get(`https://maps.weatherbit.io/v2.0/singleband/fullsat/latest/6/45/45.png?key=${WEATHER_KEY}`)
+        .then(response => {
+            console.log(response)
+            return response
+        })
+})
+

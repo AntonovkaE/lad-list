@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import Home from "../pages/Home";
 import About from "../pages/About";
 import { Navbar } from "./Navbar/Navbar";
-import Popup from "./Popup/Popup";
 import WeatherPopup from "./WeatherPopup/WeatherPopup";
 import { useState } from "react";
 

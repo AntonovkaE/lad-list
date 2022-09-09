@@ -10,7 +10,6 @@ const initialState = {
     forecast: {},
     city: '',
     country: ''
-
 }
 
 const cityDataSlice = createSlice({
@@ -57,7 +56,6 @@ const cityDataSlice = createSlice({
         builder.addCase(fetchForecast.fulfilled, (state, action) => {
             state.loading = false;
             state.forecast = action.payload
-            state.forecast.length = 8
             console.log(state.forecast)
             // state.error = ''
         })

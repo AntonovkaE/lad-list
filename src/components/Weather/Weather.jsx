@@ -19,7 +19,6 @@ function Weather({ item }) {
         return new Date(Date.parse(string))
     }
     const dayDate = transformData(item.datetime)
-
     const options = {
         weekday: 'short'
     };

@@ -19,7 +19,7 @@ function WeatherPopup({ isOpen, onClose }) {
 
             <h2>{ `${data.city}, ${data.country}` }</h2>
 
-            <City city={ data.city }/>
+            <City city={ data.city } days={8}/>
         </Popup>
     );
 }
