@@ -3,7 +3,7 @@ import Form from '../components/Form/Form';
 import Gallery from '../components/Gallery/Gallery';
 import { commonArray } from '../utils/constance';
 
-export const About = ({ onShowWeather }) => {
+export const Forecast = ({ onShowWeather }) => {
   return (
     <main>
       <h2 className='page__title'>Weather in your city</h2>
@@ -14,4 +14,4 @@ export const About = ({ onShowWeather }) => {
   );
 };
 
-export default About;
+export default Forecast;

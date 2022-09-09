@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from "../../pages/Home";
-import About from "../../pages/About";
+import Articles from "../../pages/Articles";
+import Forecast from "../../pages/Forecast";
 import { Navbar } from "../Navbar/Navbar";
 import WeatherPopup from "../WeatherPopup/WeatherPopup";
 import { useState } from "react";
@@ -20,9 +20,9 @@ function App() {
             <Navbar />
             <div className="container pt-5">
                 <Routes>
-                    <Route path="/about" element={ <About onShowWeather={handleShowWeatherClick} /> }>
+                    <Route path="/" element={ <Forecast onShowWeather={handleShowWeatherClick} /> }>
                     </Route>
-                    <Route path="/" element={ <Home/> }>
+                    <Route path="/info" element={ <Articles/> }>
                     </Route>
                 </Routes>
                 <WeatherPopup isOpen={ isWeatherPopupOpen } onClose={ closeAllPopups }/>

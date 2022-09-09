@@ -16,7 +16,7 @@ const showBackground = (code) => {
               (code === 800) ? sunImg : cloudsImg);
 }
 
-
+const  phenomenons =  [{name: 'storm', link : 'https://images.unsplash.com/photo-1527482797697-8795b05a13fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3174&q=80'}, ]
 export {
   windImg, stormImg, sunImg, snowImg, rainImg, fogImg, cloudsImg, commonArray, showBackground
 };

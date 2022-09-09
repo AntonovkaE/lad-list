@@ -6,10 +6,10 @@ export const Navbar = () => (
            <h1 className="navbar-brand">Weather</h1>
            <ul className="navbar-nav">
                <li className="nav-item">
-                   <NavLink className="nav-link" to="/">Home</NavLink>
+                   <NavLink className="nav-link" to="/info">Weather</NavLink>
                </li>
                <li className="nav-item">
-                   <NavLink className="nav-link" to="/about">Прогноз погоды</NavLink>
+                   <NavLink className="nav-link" to="/">Natural phenomena</NavLink>
                </li>
            </ul>
     </nav>)
