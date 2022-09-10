@@ -1,6 +1,6 @@
 import React from 'react';
 import './weather.css';
-import WeatherIcon from '../WeatherIcon/WeatherIcon';
+import WeatherIcon from './WeatherIcon/WeatherIcon';
 
 function Weather({ item, showDate, id}) {
   const today = new Date().setHours(0, 0, 0, 0);

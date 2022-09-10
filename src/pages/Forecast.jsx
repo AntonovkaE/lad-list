@@ -5,11 +5,10 @@ import { commonArray } from '../utils/constance';
 
 export const Forecast = ({ onShowWeather }) => {
   return (
-    <main>
-      <h2 className='page__title'>Weather in your city</h2>
+    <>
       <Form handleSubmit={ onShowWeather }/>
       <Gallery commonArray={ commonArray }/>
-    </main>
+    </>
 
   );
 };

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCityCoords, fetchForecast } from '../Api/Api';
 import Weather from '../Weather/Weather';
-import './style.css'
+import './weatherPopup.css'
 import { showBackground} from '../../utils/constance';
 
 function WeatherPopup({ isOpen, onClose }) {

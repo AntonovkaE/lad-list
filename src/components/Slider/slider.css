@@ -1,0 +1,24 @@
+.slider {
+  overflow: hidden;
+}
+
+.slider__inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.slider__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+.slider__indicators {
+  display: flex;
+  justify-content: center;
+}
+

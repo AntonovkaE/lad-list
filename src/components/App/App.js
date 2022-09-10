@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import Articles from "../../pages/Articles";
+import ImageGallery from "../../pages/ImageGallery";
 import Forecast from "../../pages/Forecast";
 import { Navbar } from "../Navbar/Navbar";
 import WeatherPopup from "../WeatherPopup/WeatherPopup";
@@ -18,15 +18,15 @@ function App() {
     return (
         <div className="page container">
             <Navbar />
-            <div className="container pt-5">
+            <main className="container pt-5">
                 <Routes>
                     <Route path="/" element={ <Forecast onShowWeather={handleShowWeatherClick} /> }>
                     </Route>
-                    <Route path="/info" element={ <Articles/> }>
+                    <Route path="/info" element={ <ImageGallery/> }>
                     </Route>
                 </Routes>
                 <WeatherPopup isOpen={ isWeatherPopupOpen } onClose={ closeAllPopups }/>
-            </div>
+            </main>
         </div>
     )
 }

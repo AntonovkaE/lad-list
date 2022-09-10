@@ -1,6 +1,6 @@
 import React from 'react';
 import Weather from '../Weather/Weather';
-import '../WeatherPopup/style.css';
+import '../WeatherPopup/weatherPopup.css';
 import { showBackground } from '../../utils/constance';
 import './city.css'
 
