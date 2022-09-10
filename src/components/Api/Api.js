@@ -24,7 +24,6 @@ export const fetchCitiesWeather = createAsyncThunk('forecastCities/fetchCitiesWe
   return axios
     .get(`${WEATHER_API}/current?cities=${cities}&key=${WEATHER_KEY}`)
     .then(response => {
-      console.log(response.data.data)
       return response.data.data
     })
 })

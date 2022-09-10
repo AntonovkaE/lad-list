@@ -1,46 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import { natureImages } from '../../utils/constance';
-import './slider.css'
-import { useSwipeable } from 'react-swipeable'
+import './slider.css';
+import { useSwipeable } from 'react-swipeable';
 
 export const Slider = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [background, setBackground] = useState(natureImages[activeIndex]);
-  // const [paused, setPaused] = useState(false)
 
   const updateIndex = (newIndex) => {
-    console.log(`count ${React.Children.count(children)}`)
     if (newIndex < 0) {
 
       newIndex = React.Children.count(children) - 1;
-      console.log(newIndex)
     } else if (newIndex > React.Children.count(children) - 1) {
-      newIndex = 0
-      console.log(newIndex)
-
+      newIndex = 0;
     }
     setActiveIndex(newIndex);
   };
   useEffect(() => {
-    setBackground(natureImages[activeIndex])
-  }, [activeIndex])
+    setBackground(natureImages[activeIndex]);
+  }, [activeIndex]);
 
   const handlers = useSwipeable({
     onSwipedLeft: () => updateIndex(activeIndex + 1),
-    onSwipedRight: () => updateIndex(activeIndex - 1)
-  })
+    onSwipedRight: () => updateIndex(activeIndex - 1),
+  });
 
   return (
-    <div className="slider" {...handlers}>
+    <div className="slider" { ... handlers }>
       <div className="slider__inner"
            style={ { transform: `translateX(-${ activeIndex * 100 }%)` } }>
         { React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, {width: '100%', background: `url(${ background })`})
-        })}
+          return React.cloneElement(child, { width: '100%', background: `url(${ background })` });
+        }) }
       </div>
       <div className="slider__indicators indicators">
         <button className="btn btn-sm indicators__btn" onClick={ () => {
-          console.log(activeIndex - 1)
           updateIndex(activeIndex - 1);
         } }
         >Prev
@@ -49,7 +43,6 @@ export const Slider = ({ children }) => {
           return (
             <button className={ `btn btn-sm indicators__btn ${ index === activeIndex ? 'btn-primary' : '' }` }
                     onClick={ () => {
-                      console.log(`active ${index}`)
                       updateIndex(index);
                     } }
             >{ index + 1 }
@@ -57,12 +50,10 @@ export const Slider = ({ children }) => {
           );
         }) }
         <button className="btn btn-sm indicators__btn" onClick={ () => {
-          console.log(activeIndex + 1)
           updateIndex(activeIndex + 1);
         } }
         >Next
         </button>
-
       </div>
     </div>
   );
