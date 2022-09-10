@@ -3,27 +3,25 @@ import { useDispatch } from 'react-redux';
 // import { addCity } from "../../redux/citiesSlice";
 import { showWeather } from '../../redux/cityDataSlice';
 import Input from './Input/Input';
-import './style.css';
+import './form.css';
+import { fetchCityCoords } from '../Api/Api';
 
-const Form = ({ handleSubmit }) => {
+const Form = ({ handleSubmit, title }) => {
   const [city, setCity] = useState('');
-  const dispatch = useDispatch();
 
   const onSubmit = (event) => {
     event.preventDefault();
-    dispatch(showWeather({
-      city: city,
-    }));
     setCity('');
-    handleSubmit();
+    handleSubmit(city)
   };
+
   const handleCityChange = (e) => {
     setCity(e.target.value);
   };
 
   return (
     <section>
-      <h2 className="page__title">Weather in your city</h2>
+      <h2 className="page__title">{title}</h2>
       <form onSubmit={ onSubmit }
             className="form-inline mt-3 mb-3 form-control d-flex justify-content-between align-content-md-center ">
         <Input

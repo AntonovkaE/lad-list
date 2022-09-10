@@ -1,0 +1,31 @@
+.coords__city {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.coords__text {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.coords__block {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 576px) {
+  .coords__city {
+    font-size: 2.5rem;
+  }
+
+  .coords__text {
+    font-size: 2rem;
+  }
+
+  .coords__block {
+    flex-direction: row;
+  }
+}

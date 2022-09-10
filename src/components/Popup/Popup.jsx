@@ -4,12 +4,6 @@ import './popup.css'
 
 
 const Popup = ({ isOpen, name, onClose, background, children }) => {
-    const myStyle = {
-        backgroundImage: "url(background)",
-        height: '100vh',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
-    }
     useEffect(() => {
         if (!isOpen) return;
         const closeByEscape = (e) => {

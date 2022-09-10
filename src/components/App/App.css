@@ -18,7 +18,17 @@
   letter-spacing: 1px;
 }
 
+@media screen and (max-width: 576px){
+  .section__title {
+
+  }
+}
+
 .page {
   background: rgba(248, 249, 250);
   height: 100vh;
+}
+
+.section {
+  margin-top: 100px;
 }

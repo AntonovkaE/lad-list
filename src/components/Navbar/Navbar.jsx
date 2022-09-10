@@ -6,7 +6,7 @@ export const Navbar = () => (
            <h1 className="navbar-brand nav-link">Weather</h1>
            <ul className="navbar-nav">
                <li className="nav-item">
-                   <NavLink className="nav-link" to="/foto">Natural phenomena</NavLink>
+                   <NavLink className="nav-link" to="/coords">Get coords</NavLink>
                </li>
                <li className="nav-item">
                    <NavLink className="nav-link" to="/">Weather</NavLink>

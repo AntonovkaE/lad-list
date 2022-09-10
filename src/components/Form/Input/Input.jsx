@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css'
+import './input.css'
 
 
 function Input({value='', name, onChange = () => {}, placeholder, maxLength, minLength, type="text", mode="light"}) {
