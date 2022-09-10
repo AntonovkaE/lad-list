@@ -6,10 +6,3 @@ export default configureStore({
     city: cityDataReducer,
   },
 });
-
-// middleware: getDefaultMiddleware =>
-//     getDefaultMiddleware({
-//         thunk: {
-//             extraArgument: ''
-//         }
-//     })

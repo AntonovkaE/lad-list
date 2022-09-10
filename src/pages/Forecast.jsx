@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Form from '../components/Form/Form';
 import Gallery from '../components/Gallery/Gallery';
 import { commonArray } from '../utils/constance';
