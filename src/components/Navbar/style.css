@@ -11,3 +11,12 @@
 .navbar {
     justify-content: space-around;
 }
+.nav-link {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 480px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+
+}

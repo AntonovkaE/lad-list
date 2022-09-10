@@ -22,7 +22,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={ <Forecast onShowWeather={handleShowWeatherClick} /> }>
                     </Route>
-                    <Route path="/info" element={ <ImageGallery/> }>
+                    <Route path="/foto" element={ <ImageGallery/> }>
                     </Route>
                 </Routes>
                 <WeatherPopup isOpen={ isWeatherPopupOpen } onClose={ closeAllPopups }/>

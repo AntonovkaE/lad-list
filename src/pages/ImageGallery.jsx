@@ -7,9 +7,16 @@ export const ImageGallery = () => {
   return (<section>
     <h2 className="section__title"></h2>
       <Slider>
-        <SliderItem>1</SliderItem>
-        <SliderItem>2</SliderItem>
-        <SliderItem>4</SliderItem>
+        <SliderItem></SliderItem>
+        <SliderItem></SliderItem>
+        <SliderItem></SliderItem>
+        <SliderItem></SliderItem>
+        <SliderItem></SliderItem>
+        <SliderItem></SliderItem>
+        <SliderItem></SliderItem>
+        <SliderItem></SliderItem>
+        <SliderItem></SliderItem>
+        <SliderItem></SliderItem>
       </Slider>
 
   </section>
