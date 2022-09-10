@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { natureImages } from '../../utils/constance';
 import './slider.css'
+import { useSwipeable } from 'react-swipeable'
 
 export const Slider = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -24,8 +25,13 @@ export const Slider = ({ children }) => {
     setBackground(natureImages[activeIndex])
   }, [activeIndex])
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => updateIndex(activeIndex + 1),
+    onSwipedRight: () => updateIndex(activeIndex - 1)
+  })
+
   return (
-    <div className="slider">
+    <div className="slider" {...handlers}>
       <div className="slider__inner"
            style={ { transform: `translateX(-${ activeIndex * 100 }%)` } }>
         { React.Children.map(children, (child, index) => {
