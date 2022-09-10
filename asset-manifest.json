@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AntonovkaE/weatherAndCoords/static/css/main.405aecfb.css",
-    "main.js": "/AntonovkaE/weatherAndCoords/static/js/main.1761e7a7.js",
+    "main.js": "/AntonovkaE/weatherAndCoords/static/js/main.e3756fac.js",
     "static/js/787.c5e640c4.chunk.js": "/AntonovkaE/weatherAndCoords/static/js/787.c5e640c4.chunk.js",
     "static/media/sun.png": "/AntonovkaE/weatherAndCoords/static/media/sun.21567b35c50bcfa9ac32.png",
     "static/media/snow.png": "/AntonovkaE/weatherAndCoords/static/media/snow.756f1d2d492b8e9246fb.png",
@@ -14,11 +14,11 @@
     "static/media/free-icon-mist-2910189.png": "/AntonovkaE/weatherAndCoords/static/media/free-icon-mist-2910189.5197babd3ce944111dd0.png",
     "index.html": "/AntonovkaE/weatherAndCoords/index.html",
     "main.405aecfb.css.map": "/AntonovkaE/weatherAndCoords/static/css/main.405aecfb.css.map",
-    "main.1761e7a7.js.map": "/AntonovkaE/weatherAndCoords/static/js/main.1761e7a7.js.map",
+    "main.e3756fac.js.map": "/AntonovkaE/weatherAndCoords/static/js/main.e3756fac.js.map",
     "787.c5e640c4.chunk.js.map": "/AntonovkaE/weatherAndCoords/static/js/787.c5e640c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.405aecfb.css",
-    "static/js/main.1761e7a7.js"
+    "static/js/main.e3756fac.js"
   ]
 }
