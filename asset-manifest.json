@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/weatherAndCoords/static/css/main.405aecfb.css",
-    "main.js": "/weatherAndCoords/static/js/main.0d7f45dd.js",
+    "main.js": "/weatherAndCoords/static/js/main.5f725b63.js",
     "static/js/787.c5e640c4.chunk.js": "/weatherAndCoords/static/js/787.c5e640c4.chunk.js",
     "static/media/sun.png": "/weatherAndCoords/static/media/sun.21567b35c50bcfa9ac32.png",
     "static/media/snow.png": "/weatherAndCoords/static/media/snow.756f1d2d492b8e9246fb.png",
@@ -14,11 +14,11 @@
     "static/media/free-icon-mist-2910189.png": "/weatherAndCoords/static/media/free-icon-mist-2910189.5197babd3ce944111dd0.png",
     "index.html": "/weatherAndCoords/index.html",
     "main.405aecfb.css.map": "/weatherAndCoords/static/css/main.405aecfb.css.map",
-    "main.0d7f45dd.js.map": "/weatherAndCoords/static/js/main.0d7f45dd.js.map",
+    "main.5f725b63.js.map": "/weatherAndCoords/static/js/main.5f725b63.js.map",
     "787.c5e640c4.chunk.js.map": "/weatherAndCoords/static/js/787.c5e640c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.405aecfb.css",
-    "static/js/main.0d7f45dd.js"
+    "static/js/main.5f725b63.js"
   ]
 }
