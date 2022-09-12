@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/weatherAndCoords/static/css/main.405aecfb.css",
-    "main.js": "/weatherAndCoords/static/js/main.8461dd0d.js",
-    "static/js/787.c5e640c4.chunk.js": "/weatherAndCoords/static/js/787.c5e640c4.chunk.js",
-    "static/media/sun.png": "/weatherAndCoords/static/media/sun.21567b35c50bcfa9ac32.png",
-    "static/media/snow.png": "/weatherAndCoords/static/media/snow.756f1d2d492b8e9246fb.png",
-    "static/media/storm1.png": "/weatherAndCoords/static/media/storm1.9858cd2c009cf476e4fd.png",
-    "static/media/slightRain.png": "/weatherAndCoords/static/media/slightRain.3cbb1c9c62b554d6e690.png",
-    "static/media/wind.png": "/weatherAndCoords/static/media/wind.301e95ec480e4e9d9e70.png",
-    "static/media/rain.png": "/weatherAndCoords/static/media/rain.9befe18095a7a7542d8c.png",
-    "static/media/cloud.png": "/weatherAndCoords/static/media/cloud.db0a0308cdfb1fdba00f.png",
-    "static/media/clouds.png": "/weatherAndCoords/static/media/clouds.b9a187440c6c127890af.png",
-    "static/media/free-icon-mist-2910189.png": "/weatherAndCoords/static/media/free-icon-mist-2910189.5197babd3ce944111dd0.png",
-    "index.html": "/weatherAndCoords/index.html",
-    "main.405aecfb.css.map": "/weatherAndCoords/static/css/main.405aecfb.css.map",
-    "main.8461dd0d.js.map": "/weatherAndCoords/static/js/main.8461dd0d.js.map",
-    "787.c5e640c4.chunk.js.map": "/weatherAndCoords/static/js/787.c5e640c4.chunk.js.map"
+    "main.css": "/AntonovkaE/weatherAndCoords/static/css/main.405aecfb.css",
+    "main.js": "/AntonovkaE/weatherAndCoords/static/js/main.e3756fac.js",
+    "static/js/787.c5e640c4.chunk.js": "/AntonovkaE/weatherAndCoords/static/js/787.c5e640c4.chunk.js",
+    "static/media/sun.png": "/AntonovkaE/weatherAndCoords/static/media/sun.21567b35c50bcfa9ac32.png",
+    "static/media/snow.png": "/AntonovkaE/weatherAndCoords/static/media/snow.756f1d2d492b8e9246fb.png",
+    "static/media/storm1.png": "/AntonovkaE/weatherAndCoords/static/media/storm1.9858cd2c009cf476e4fd.png",
+    "static/media/slightRain.png": "/AntonovkaE/weatherAndCoords/static/media/slightRain.3cbb1c9c62b554d6e690.png",
+    "static/media/wind.png": "/AntonovkaE/weatherAndCoords/static/media/wind.301e95ec480e4e9d9e70.png",
+    "static/media/rain.png": "/AntonovkaE/weatherAndCoords/static/media/rain.9befe18095a7a7542d8c.png",
+    "static/media/cloud.png": "/AntonovkaE/weatherAndCoords/static/media/cloud.db0a0308cdfb1fdba00f.png",
+    "static/media/clouds.png": "/AntonovkaE/weatherAndCoords/static/media/clouds.b9a187440c6c127890af.png",
+    "static/media/free-icon-mist-2910189.png": "/AntonovkaE/weatherAndCoords/static/media/free-icon-mist-2910189.5197babd3ce944111dd0.png",
+    "index.html": "/AntonovkaE/weatherAndCoords/index.html",
+    "main.405aecfb.css.map": "/AntonovkaE/weatherAndCoords/static/css/main.405aecfb.css.map",
+    "main.e3756fac.js.map": "/AntonovkaE/weatherAndCoords/static/js/main.e3756fac.js.map",
+    "787.c5e640c4.chunk.js.map": "/AntonovkaE/weatherAndCoords/static/js/787.c5e640c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.405aecfb.css",
-    "static/js/main.8461dd0d.js"
+    "static/js/main.e3756fac.js"
   ]
 }
