@@ -1,13 +1,13 @@
-import { Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { showWeather } from '../../redux/cityDataSlice';
 import Coords from '../../pages/Coords';
 import Forecast from '../../pages/Forecast';
 import { Navbar } from '../Navbar/Navbar';
 import WeatherPopup from '../WeatherPopup/WeatherPopup';
-import { useState } from 'react';
 import './App.css';
-import { Footer } from '../Footer/Footer';
-import { showWeather } from '../../redux/cityDataSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import Footer from '../Footer/Footer';
 import { fetchCityCoords } from '../Api/Api';
 
 function App() {
@@ -19,30 +19,29 @@ function App() {
   const dispatch = useDispatch();
   const handleShowWeatherClick = (city) => {
     dispatch(showWeather({
-      city: city,
+      city,
     }));
     setIsWeatherPopupOpen(!isWeatherPopupOpen);
   };
-  const data = useSelector((state) => state.city);
-
   const handleGetCoords = (city) => {
-    dispatch(fetchCityCoords(city))
-
+    dispatch(fetchCityCoords(city));
   };
-
   return (
     <div className="page container">
-      <Navbar/>
+      <Navbar />
       <main className="container pt-5">
         <Routes>
-          <Route path="/" element={ <Forecast onShowWeather={ handleShowWeatherClick }/> }>
-          </Route>
-          <Route path="/coords" element={ <Coords onSubmit={handleGetCoords}/> }>
-          </Route>
+          <Route path="/" element={<Forecast onShowWeather={handleShowWeatherClick} />} />
+          <Route path="/coords" element={<Coords onSubmit={handleGetCoords} />} />
+          <Route
+            exact
+            path="*"
+            element={<Navigate replace to="/" />}
+          />
         </Routes>
-        <WeatherPopup isOpen={ isWeatherPopupOpen } onClose={ closeAllPopups }/>
+        <WeatherPopup isOpen={isWeatherPopupOpen} onClose={closeAllPopups} />
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

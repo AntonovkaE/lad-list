@@ -10,7 +10,7 @@ const initialState = {
   city: '',
   country: '',
   error: '',
-  citiesWithWeather: []
+  citiesWithWeather: [],
 };
 
 const cityDataSlice = createSlice({
@@ -56,12 +56,12 @@ const cityDataSlice = createSlice({
     });
     builder.addCase(fetchCitiesWeather.fulfilled, (state, action) => {
       state.loading = false;
-      state.citiesWithWeather = action.payload
+      state.citiesWithWeather = action.payload;
       state.error = '';
     });
     builder.addCase(fetchCitiesWeather.rejected, (state, action) => {
       state.loading = false;
-      state.citiesWithWeather = []
+      state.citiesWithWeather = [];
       state.error = action.payload;
     });
   },
